@@ -66,8 +66,8 @@ body {
   top: 0;
 }
 .menu__list {
-  display: flex;
   justify-content: space-between;
+  display: flex;
   align-items: center;
 }
 .menu__item {
@@ -127,8 +127,8 @@ body {
 
 .card-top {
   max-width: 100%;
-  display: flex;
   justify-content: space-between;
+  display: flex;
   align-items: center;
   padding: 0 15px;
   margin-bottom: 5px;
