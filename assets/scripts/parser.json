@@ -1,0 +1,33 @@
+[
+    {
+        "group":"ColdAppitaizers",
+        "img":"/images/slider/Lamb.png",
+        "title":"Ягненок",
+        "weight":"Вес: 225 г",
+        "text":"Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
+        "price":"620 ₽",
+        "button":"В корзину"
+    },
+    {
+        "img":"",
+        "title":"",
+        "weight":"",
+        "text":"",
+        "price":"",
+        "button":""
+    },{
+        "img":"",
+        "title":"",
+        "weight":"",
+        "text":"",
+        "price":"",
+        "button":""
+    },{
+        "img":"",
+        "title":"",
+        "weight":"",
+        "text":"",
+        "price":"",
+        "button":""
+    }
+]
