@@ -8,33 +8,22 @@ html(lang="en")
         link(rel="stylesheet" href="/css/bootstrap-grid.min.css")
         link(rel="stylesheet" href="/css/main.css")
     body 
+        mixin menu__list(arr)
+            ul.menu__list
+                each item in arr
+                    li.menu__item
+                        a.menu__link(href='#')= item
         .body
             .menu
                 .menu__content
                     .container
-                        ul.menu__list
-                            li.menu__item
-                                a.menu__link(href='#') Холодные закуски
-                            li.menu__item
-                                a.menu__link(href='#') Горячие закуски
-                            li.menu__item
-                                a.menu__link(href='#') Мясные блюда
-                            li.menu__item
-                                a.menu__link(href='#') Супы
-                            li.menu__item
-                                a.menu__link(href='#') Рыбные блюда
-                            li.menu__item
-                                a.menu__link(href='#') Гриль меню 
-                            li.menu__item
-                                a.menu__link(href='#') Фирменные блюда
-                            li.menu__item
-                                a.menu__link(href='#') Напитки
+                        +menu__list(['Холодные закуски','Горячие закуски','Мясные блюда','Супы','Рыбные блюда','Холодные закуски','Фирменные блюда','Напитки'])
             .slider 
                 .slider__content 
                     .container
                         h2.slider__title.title Холодные закуски
-                    ul.slider__list 
-                        li.slider__item.card
+                    .slider__list 
+                        .slider__item.card
                             a.card__link
                                 .card__content 
                                     .card__img
@@ -48,7 +37,35 @@ html(lang="en")
                                         .card-bottom__price 620 ₽
                                         button.card-bottom__button В корзину
                                             img(src="/images/slider/Buy.svg" alt="#")
-                        li.slider__item.card
+                        .slider__item.card
+                            a.card__link 
+                                .card__content 
+                                    .card__img 
+                                        img(src="/images/slider/Turkey.png" alt="")
+                                    .card__top.card-top
+                                        .card-top__title Индейка
+                                        .card-top__weight Вес: 330 г
+                                    .card__middle.card-middle
+                                        .card-middle__subtitle Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком
+                                    .card__bottom.card-bottom
+                                        .card-bottom__price 450 ₽
+                                        button.card-bottom__button В корзину
+                                            img(src="/images/slider/Buy.svg" alt="#")
+                        .slider__item.card
+                            a.card__link 
+                                .card__content 
+                                    .card__img 
+                                        img(src="/images/slider/Goose.png" alt="")
+                                    .card__top.card-top
+                                        .card-top__title Гусь
+                                        .card-top__weight Вес: 275 г
+                                    .card__middle.card-middle
+                                        .card-middle__subtitle Фаршированный яблоками
+                                    .card__bottom.card-bottom
+                                        .card-bottom__price 7 900 ₽
+                                        button.card-bottom__button В корзину
+                                            img(src="/images/slider/Buy.svg" alt="#")
+                        .slider__item.card
                             a.card__link 
                                 .card__content 
                                     .card__img 
@@ -62,44 +79,16 @@ html(lang="en")
                                         .card-bottom__price 620 ₽
                                         button.card-bottom__button В корзину
                                             img(src="/images/slider/Buy.svg" alt="#")
-                        li.slider__item.card
-                            a.card__link 
-                                .card__content 
-                                    .card__img 
-                                        img(src="/images/slider/Goose.png" alt="")
-                                    .card__top.card-top
-                                        .card-top__title Ягненок
-                                        .card-top__weight Вес: 225 г
-                                    .card__middle.card-middle
-                                        .card-middle__subtitle Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком
-                                    .card__bottom.card-bottom
-                                        .card-bottom__price 620 ₽
-                                        button.card-bottom__button В корзину
-                                            img(src="/images/slider/Buy.svg" alt="#")
-                        li.slider__item.card
+                        .slider__item.card
                             a.card__link 
                                 .card__content 
                                     .card__img 
                                         img(src="/images/slider/Duck.png" alt="")
                                     .card__top.card-top
-                                        .card-top__title Ягненок
-                                        .card-top__weight Вес: 225 г
+                                        .card-top__title Утка
+                                        .card-top__weight Вес: 305 г
                                     .card__middle.card-middle
-                                        .card-middle__subtitle Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком
-                                    .card__bottom.card-bottom
-                                        .card-bottom__price 620 ₽
-                                        button.card-bottom__button В корзину
-                                            img(src="/images/slider/Buy.svg" alt="#")
-                        li.slider__item.card
-                            a.card__link 
-                                .card__content 
-                                    .card__img 
-                                        img(src="/images/slider/Goose.png" alt="")
-                                    .card__top.card-top
-                                        .card-top__title Ягненок
-                                        .card-top__weight Вес: 225 г
-                                    .card__middle.card-middle
-                                        .card-middle__subtitle Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком
+                                        .card-middle__subtitle Фаршированная рисом, курагой и айвой
                                     .card__bottom.card-bottom
                                         .card-bottom__price 620 ₽
                                         button.card-bottom__button В корзину

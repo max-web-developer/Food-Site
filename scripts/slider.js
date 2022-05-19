@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.slider__list').slick({
         // infinite: false,
-        // speed: 300,
+        speed: 350,
         slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [

@@ -42,6 +42,7 @@ body {
   color: #ffffff;
   background: linear-gradient(360deg, #211F20 0%, #44403F 100%);
   background-repeat: no-repeat;
+  height: 742px;
 }
 
 .container {
@@ -95,6 +96,10 @@ body {
 .slider__list {
   padding: 0 15px;
 }
+.slider {
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
+}
 .card {
   background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
   border-radius: 10px;
@@ -141,6 +146,7 @@ body {
   color: #cfcfcf;
   font-size: 0.8125rem;
   margin-bottom: 15px;
+  min-height: 45px;
 }
 
 .card-bottom {
@@ -155,7 +161,7 @@ body {
   font-weight: 600;
 }
 .card-bottom__button {
-  width: 137px;
+  width: 50%;
   height: 44px;
   background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
   border-radius: 10px;

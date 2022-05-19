@@ -30,7 +30,8 @@
     }
 }
 .slider {
-
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ffffff1a;
     &__item {
     }
 }
@@ -81,6 +82,7 @@
         color: #cfcfcf;
         font-size: 0.8125rem;
         margin-bottom: 15px;
+        min-height: 45px;
     }
 }
 .card-bottom {
@@ -94,7 +96,7 @@
         font-weight: 600;
     }
     &__button {
-        width: 137px;
+        width: 50%;
         height: 44px;
         background: $linear-green;
         border-radius: 10px;
@@ -102,8 +104,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        font-weight: 600;
-        
+        font-weight: 600;   
     }
 }
 .slider__list .slick-arrow {
