@@ -30,3 +30,36 @@
     &__link {
     }
 }
+
+@media (max-width: 992px) {
+    .menu {
+        
+        &__list {
+        }
+        &__item{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .menu {
+        overflow-x: auto;
+        
+        white-space: nowrap;
+        &__list {
+            width: auto;
+            justify-content: start;
+        }
+        &__item:not(:last-child) {
+            margin-right: 40px;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    
+}
