@@ -7,37 +7,24 @@ html(lang="en")
         title Document
         link(rel="stylesheet" href="/css/bootstrap-grid.min.css")
         link(rel="stylesheet" href="/css/main.css")
+        link(rel="stylesheet", href="/sass/main.scss")
     body 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="/scripts/slick.min.js"></script>
-        <script src="/scripts/slider.js"></script>
-        .body 
+        mixin menu__list(arr)
+            ul.menu__list
+                each item in arr
+                    li.menu__item
+                        a.menu__link(href='#')= item
+        .body
             .menu
                 .menu__content
                     .container
-                        ul.menu__list
-                            li.menu__item
-                                a.menu__link(href='#') Холодные закуски
-                            li.menu__item
-                                a.menu__link(href='#') Горячие закуски
-                            li.menu__item
-                                a.menu__link(href='#') Мясные блюда
-                            li.menu__item
-                                a.menu__link(href='#') Супы
-                            li.menu__item
-                                a.menu__link(href='#') Рыбные блюда
-                            li.menu__item
-                                a.menu__link(href='#') Гриль меню 
-                            li.menu__item
-                                a.menu__link(href='#') Фирменные блюда
-                            li.menu__item
-                                a.menu__link(href='#') Напитки
+                        +menu__list(['Холодные закуски','Горячие закуски','Мясные блюда','Супы','Рыбные блюда','Холодные закуски','Фирменные блюда','Напитки'])
             .slider 
                 .slider__content 
                     .container
                         h2.slider__title.title Холодные закуски
-                    ul.slider__list 
-                        li.slider__item.card
+                    .slider__list 
+                        .slider__item.card
                             a.card__link
                                 .card__content 
                                     .card__img
@@ -50,7 +37,36 @@ html(lang="en")
                                     .card__bottom.card-bottom
                                         .card-bottom__price 620 ₽
                                         button.card-bottom__button В корзину
-                        li.slider__item.card
+                                            img(src="/images/slider/Buy.svg" alt="#")
+                        .slider__item.card
+                            a.card__link 
+                                .card__content 
+                                    .card__img 
+                                        img(src="/images/slider/Turkey.png" alt="")
+                                    .card__top.card-top
+                                        .card-top__title Индейка
+                                        .card-top__weight Вес: 330 г
+                                    .card__middle.card-middle
+                                        .card-middle__subtitle Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком
+                                    .card__bottom.card-bottom
+                                        .card-bottom__price 450 ₽
+                                        button.card-bottom__button В корзину
+                                            img(src="/images/slider/Buy.svg" alt="#")
+                        .slider__item.card
+                            a.card__link 
+                                .card__content 
+                                    .card__img 
+                                        img(src="/images/slider/Goose.png" alt="")
+                                    .card__top.card-top
+                                        .card-top__title Гусь
+                                        .card-top__weight Вес: 275 г
+                                    .card__middle.card-middle
+                                        .card-middle__subtitle Фаршированный яблоками
+                                    .card__bottom.card-bottom
+                                        .card-bottom__price 7 900 ₽
+                                        button.card-bottom__button В корзину
+                                            img(src="/images/slider/Buy.svg" alt="#")
+                        .slider__item.card
                             a.card__link 
                                 .card__content 
                                     .card__img 
@@ -63,42 +79,56 @@ html(lang="en")
                                     .card__bottom.card-bottom
                                         .card-bottom__price 620 ₽
                                         button.card-bottom__button В корзину
-                        li.slider__item.card
-                            a.card__link 
-                                .card__content 
-                                    .card__img 
-                                        img(src="/images/slider/Goose.png" alt="")
-                                    .card__top.card-top
-                                        .card-top__title Ягненок
-                                        .card-top__weight Вес: 225 г
-                                    .card__middle.card-middle
-                                        .card-middle__subtitle Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком
-                                    .card__bottom.card-bottom
-                                        .card-bottom__price 620 ₽
-                                        button.card-bottom__button В корзину
-                        li.slider__item.card
+                                            img(src="/images/slider/Buy.svg" alt="#")
+                        .slider__item.card
                             a.card__link 
                                 .card__content 
                                     .card__img 
                                         img(src="/images/slider/Duck.png" alt="")
                                     .card__top.card-top
-                                        .card-top__title Ягненок
-                                        .card-top__weight Вес: 225 г
+                                        .card-top__title Утка
+                                        .card-top__weight Вес: 305 г
                                     .card__middle.card-middle
-                                        .card-middle__subtitle Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком
+                                        .card-middle__subtitle Фаршированная рисом, курагой и айвой
                                     .card__bottom.card-bottom
                                         .card-bottom__price 620 ₽
                                         button.card-bottom__button В корзину
-                        li.slider__item.card
-                            a.card__link 
-                                .card__content 
-                                    .card__img 
-                                        img(src="/images/slider/Goose.png" alt="")
-                                    .card__top.card-top
-                                        .card-top__title Ягненок
-                                        .card-top__weight Вес: 225 г
-                                    .card__middle.card-middle
-                                        .card-middle__subtitle Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком
-                                    .card__bottom.card-bottom
-                                        .card-bottom__price 620 ₽
-                                        button.card-bottom__button В корзину
+                                            img(src="/images/slider/Buy.svg" alt="#")
+
+            .info 
+                .info__wrapper 
+                    .info__card 
+                        .right
+                            .info__card-title НАШЕ КАФЕ
+                                
+                            .info__card-text.text Мы расположены в одном из самых живописных мест города — на берегу реки, это ваш оазис в черте города, куда можно сбежать от шумного и пыльного мегаполиса. Мы, действительно уникальные, ведь все продумано до мелочей: проект построен из дикого закарпатского сруба, камин в основном зале ресторана и панорамные окна с видом на реку, уютные беседки на берегу реки и лучшая видовая террасса, шатер с посадкой на 200 человек, сказочный детский домик и бассейн.
+
+                            .info__card-button
+                                button.btn ПОСМОТРЕТЬ МЕНЮ  
+                        .left 
+                            .info__minicards 
+                                .info__minicard.active
+                                    .info__minicard-image
+                                        img(src="/assets/images/logo/svg/chef 1.svg", alt="")
+                                    .info__minicard-text.text Свежайшие продукты
+                                .info__minicard
+                                    .info__minicard-image 
+                                        img(src="/assets/images/logo/svg/flash 1.svg", alt="")
+                                    .info__minicard-text.text Свежайшие продукты 
+                                .info__minicard
+                                    .info__minicard-image 
+                                        img(src="/assets/images/logo/svg/onion 1.svg", alt="")
+                                    .info__minicard-text.text Свежайшие продукты
+                                .info__minicard
+                                    .info__minicard-image 
+                                        img(src="/assets/images/logo/svg/chef 1.svg", alt="")
+                                    .info__minicard-text.text Свежайшие продукты  
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/scripts/slick.min.js"></script>
+    <script src="/scripts/slider.js"></script>
+    <script src="/assets/scripts/card.js"></script>
+                                             
+
+

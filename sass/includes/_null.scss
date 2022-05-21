@@ -1,8 +1,15 @@
+$white: #ffffff;
+$black: #000000;
+$linear-green: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+$linear-black: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+$green: #618967;
+
 // ? Обнуление элементов
 html {
     scroll-behavior: smooth;
     max-width: 100%;
 }
+
 ul,
 li,
 a,
@@ -38,21 +45,10 @@ body {
     font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    color: var(--white);
+    color: $white;
     background: linear-gradient(360deg, #211F20 0%, #44403F 100%);
     background-repeat: no-repeat;
-    height: 742px;
 }
-
-:root {
-    --white: #ffffff;
-    --black: #000000;
-    --linear-green: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
-    --linear-black: linear-gradient(90deg, #494544 0%, #504B4A 100%);
-    --green: #618967;
-}
-
-
 
 // ? Обнуление элементов 
 

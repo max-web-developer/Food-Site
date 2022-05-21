@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.slider__list').slick({
         // infinite: false,
-        // speed: 300,
+        speed: 350,
         slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [
@@ -15,10 +15,11 @@ $(document).ready(function () {
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
+              arrows: false,  
               slidesToShow: 2,
-              slidesToScroll: 2
+              slidesToScroll: 1
             }
           },
           {
