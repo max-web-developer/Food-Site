@@ -1,11 +1,38 @@
-mixin head(title)
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title= title 
-    link(rel="stylesheet", href="/css/bootstrap-grid.min.css")
-    link(rel="stylesheet", href="/css/header.css")
-    //- link(rel="stylesheet", href="/assets/css/index.css")
-    .header 
-        .container 
-            .row 
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='/css/bootstrap-grid.min.css')
+  link(rel='stylesheet', href='/css/includes/header.css')
+  link(rel='stylesheet', href='/assets/fonts/font.scss')
+  title Food-Site
+  style.
+    h1 {
+    font-family: 'Roboto', sans-serif;
+    }
+.header
+  .header__description
+    .header__menu
+      .header__burger
+        span
+      .header__menu-title МЕНЮ
+    h1.header__logo LOGOS
+    .header__tel-basket
+      img.header__cart(src='/images/slider/cart.png', alt='')
+      .header__tel-basket-separation |
+      .header__tel-basket-title корзина
+  .search
+    img.search__location(src='/images/slider/location.png', alt='')
+    input.search__search-bar(placeholder='Введите адрес доставки', type='text')
+    br
+    img.search__search-icon(src='/images/slider/search.png', alt='')
+  img.header__calling(src='/images/slider/calling.png', alt='')
+  .header__contacts
+    .header__title Контакты:
+    .header__phone-number +7 (917) 510-57-59
+  .header__basket
+    .header__basket-title Корзина
+    .header__basket-separation |
+    .header__number-of-products
+      .header__active-product 4

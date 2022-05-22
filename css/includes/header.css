@@ -22,7 +22,7 @@
   width: 210px;
   height: 21px;
   margin: auto auto auto 10px;
-  font-family: "Gilroy";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -31,7 +31,6 @@
 }
 
 .search {
-  width: 555px;
   display: flex;
   background: #504B4A;
   align-items: center;
@@ -44,13 +43,14 @@
   height: 21px;
   border: none;
   outline: none;
-  font-family: "Gilroy";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   border-radius: 10px;
   background-color: #504B4A;
+  color: #CFCFCF;
   margin: auto auto auto 14px;
 }
 
@@ -63,6 +63,7 @@
 .search__search-icon {
   height: 24px;
   width: 24px;
+  margin: auto auto auto 254px;
   border-radius: 0px;
 }
 
@@ -78,7 +79,7 @@
 .header__contacts {
   width: 136px;
   height: 39px;
-  font-family: "Gilroy";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -87,7 +88,7 @@
 }
 
 .header__title {
-  font-family: "Gilroy";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -96,7 +97,7 @@
 }
 
 .header__phone-number {
-  font-family: "Gilroy";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -116,9 +117,9 @@
 }
 
 .header__basket-title {
-  font-family: "Gilroy";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   margin: auto 20px auto 24px;
@@ -139,12 +140,198 @@
 }
 
 .header__active-products {
-  font-family: "Gilroy";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 14px;
   color: #403C3B;
+}
+
+.header__tel-basket {
+  display: none;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__menu-title {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    width: 375px;
+    height: 142px;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #403C3B;
+  }
+
+  .header__menu {
+    width: 37px;
+    height: 38px;
+  }
+
+  .header__menu-title {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px auto auto;
+    color: #FFFFFF;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 20px;
+  }
+
+  .header__burger::after {
+    content: "";
+    background-color: #65906C;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    margin: 0px 7px 0px 5px;
+    left: 0;
+    bottom: 0;
+    border-radius: 50px;
+  }
+
+  .header__burger::before {
+    content: "";
+    background-color: #65906C;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    margin: 0px 7px 4px 5px;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+  }
+
+  .header__burger span {
+    background-color: #65906C;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    margin: 0px 7px 4px 5px;
+    left: 0;
+    top: 9px;
+    border-radius: 50px;
+  }
+
+  .header__logo {
+    width: 100px;
+    height: 25px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: 0.15em;
+    color: #FFFFFF;
+    margin: 0px;
+  }
+
+  .header__description {
+    width: 345px;
+    height: 56px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  .search {
+    background-color: #504B4A;
+    border-radius: 8px;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .search__search-bar {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .search__search-icon {
+    margin: auto auto auto 40px;
+  }
+
+  .header__tel-basket {
+    display: block;
+    width: 62px;
+    height: 56px;
+    background-color: #618967;
+    border-radius: 10px;
+  }
+
+  .header__cart {
+    width: 24px;
+    height: 24px;
+    margin: 5px 19px 3px;
+  }
+
+  .header__tel-basket-separation {
+    width: 48px;
+    height: 0px;
+    margin: -5px 7px 1px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .header__tel-basket-title {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin: auto 7px 9px 9.5px;
+    color: #FFFFFF;
+  }
+
+  .header__basket {
+    display: none;
+  }
+
+  .header__number-of-products {
+    display: none;
+  }
+
+  .header__active-products {
+    display: none;
+  }
+
+  .header__contacts {
+    display: none;
+  }
+
+  .header__title {
+    display: none;
+  }
+
+  .header__phone-number {
+    display: none;
+  }
+
+  .header__calling {
+    display: none;
+  }
+
+  .header__basket-separation {
+    width: 0px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+  }
 }
 
 /*# sourceMappingURL=header.css.map */
