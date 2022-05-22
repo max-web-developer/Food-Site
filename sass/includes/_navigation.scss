@@ -1,4 +1,9 @@
 .menu {
+    position: sticky;
+    top: 0;
+    background-color: #3d3939;
+    z-index: 12;
+
     &__content {
         border-bottom: 1px solid #ffffff1a;
         line-height: 60px;
@@ -21,22 +26,22 @@
         transition: .3s ease;
         color: #cfcfcf;
         cursor: pointer;
+
         &:hover {
             background-size: 100% 2px;
             color: $white;
         }
     }
 
-    &__link {
-    }
+    &__link {}
 }
 
 @media (max-width: 992px) {
     .menu {
-        
-        &__list {
-        }
-        &__item{
+
+        &__list {}
+
+        &__item {
             font-size: 0.8rem;
         }
     }
@@ -45,21 +50,29 @@
 @media (max-width: 850px) {
     .menu {
         overflow-x: auto;
-        
+
         white-space: nowrap;
+
         &__list {
             width: auto;
             justify-content: start;
         }
+
         &__item:not(:last-child) {
             margin-right: 40px;
         }
-        ::-webkit-scrollbar {
-            display: none;
+
+        &::-webkit-scrollbar {
+            height: 2px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            height: 2px;
+            background-color: #ffffff4f;
+            border-radius: 20px;
         }
     }
 }
 
-@media (max-width: 767px) {
-    
-}
+@media (max-width: 767px) {}

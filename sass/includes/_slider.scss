@@ -1,7 +1,6 @@
 .slider {
 
-    &__content {
-    }
+    &__content {}
 
     &__title {
         margin-left: 10px;
@@ -11,7 +10,8 @@
         font-weight: bold;
         text-transform: uppercase;
         margin: 50px 0;
-        &::before{
+
+        &::before {
             content: '';
             width: 4px;
             height: 30px;
@@ -26,45 +26,40 @@
         position: relative;
     }
 
-    &__item {
- 
-    }
+    &__item {}
 }
+
 .slider {
     padding-bottom: 50px;
     border-bottom: 1px solid #ffffff1a;
-    &__item {
-    }
 }
 
 .card {
     background: $linear-black;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     margin-right: 10px;
     margin-left: 10px;
-    &__link {
-        max-width: 100%;
-    }
-
-    &__content {
-        max-width: 100%;
-        padding-bottom: 15px;
-    }
 
     &__img {
         max-width: 100%;
-        & img {
-            width: 100%;
-        }
+        margin-bottom: 14px;
     }
-}
-.card-top {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    margin-bottom: 5px;
+
+    &__body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px 15px;
+    }
+
+    &__top {
+        flex: 1 1 auto;
+
+    }
+
     &__title {
         font-size: 1.375rem;
         font-weight: bold;
@@ -74,29 +69,27 @@
         font-size: 0.75rem;
         font-weight: regular;
     }
-}
-.card-middle {
-    max-width: 100%;
-    padding: 0 15px;
-    &__subtitle {
-        max-width: 85%;
+
+    &__text {
         color: #cfcfcf;
         font-size: 0.8125rem;
         margin-bottom: 5px;
         min-height: 60px;
     }
-}
-.card-bottom {
-    max-width: 100%;
-    padding: 0 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    &__bottom {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__price {
         font-size: 1.25rem;
         font-weight: 600;
     }
-    &__button {
+
+    &__basket {
         width: 50%;
         height: 44px;
         background: $linear-green;
@@ -108,11 +101,58 @@
         font-weight: 600;
         padding: 0 5px;
     }
+    &__bottom {
+
+        &_active {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__basket {
+        
+        &_active {
+            width: 62px;
+            height: 44px;
+            background-color: $green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+    }
+
+    &__price {
+    }
 }
+
+.card-top {
+
+    &__top-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    &__bottom-content {
+        // max-width: 9s0%;
+        margin-top: 5px;
+    }
+}
+
+.card {
+
+    
+}
+
+
 .slider__list .slick-arrow {
     position: absolute;
     top: 50%;
-    z-index:2;
+    z-index: 2;
     font-size: 0;
     width: 44px;
     height: 44px;
@@ -122,7 +162,7 @@
     left: 0px;
     background: url(/images/slider/arrow.svg) 0 0 no-repeat;
     background-size: cover;
-    
+
 }
 
 .slider__list .slick-arrow.slick-next {
@@ -143,6 +183,7 @@
 .draggable {
     margin: 0 auto;
 }
+
 .slick-slide {
     max-width: 100%;
 }
@@ -176,6 +217,14 @@
     background-color: #e8e8e8;
 }
 
+@media (max-width: 777px) {
+    .card {
+        &__basket {
+            font-size: 0.8rem;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .title {
         font-size: 1.25rem;
@@ -183,8 +232,11 @@
 }
 
 @media (max-width: 576px) {
-    .card-bottom {
-        &__button {
+    .card {
+        &__price {
+            font-size: 1.125rem;
+        }
+        &__basket {
             font-size: 0.7rem;
         }
     }
