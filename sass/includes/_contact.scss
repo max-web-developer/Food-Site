@@ -1,0 +1,116 @@
+.contact {
+    &__container {
+        margin-top: 70px;
+        margin-bottom: 40px;
+    }
+
+    &__card {
+        background-color: #2E2B2C;
+        box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        color: #FFFFFF;
+        padding: 25px 42px;
+
+        &-title {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+            text-transform: uppercase;
+        }
+
+        &-description {
+            border-top: 1px solid rgb(68, 68, 68);
+            border-bottom: 1px solid rgb(68, 68, 68);
+            padding: 15px 0 25px;
+            margin: 25px 0 15px 0;
+
+            .contact__card-box {
+                display: flex;
+                align-items: start;
+
+                & img {
+                    margin: 7px 12px 5px 5px;
+                }
+
+                .contact__card-subtitle {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+
+                    span {
+                        color: #CFCFCF;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            .contact__card-box:last-child {
+                margin-top: 15px;
+            }
+        }
+
+        &-book {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            .contact__card-button {
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 16px;
+                background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+                border-radius: 10px;
+                padding: 21px 30px;
+            }
+
+            .contact__card-tel {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                a {
+                    font-weight: 700;
+                    font-size: 23px;
+                    line-height: 28px;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 15px;
+                    color: #CFCFCF;
+                }
+            }
+        }
+
+        &-links {
+            display: flex;
+            width: 266px;
+            margin: auto;
+
+            p {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                margin-right: 25px;
+            }
+
+            a {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: 375px) {
+//     .contact {
+//         &__container {
+//             &__card {
+//                 &-title {
+//                     text-align: center;
+//                 }
+//             }
+//         }
+//     }
+// }
